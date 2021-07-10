@@ -1,0 +1,11 @@
+## Package/Dockerise application using github actions
+## Basic workflow
+name: Docker Build Workflow
+
+# Controls when function will run. Triggers workflow
+on:
+  push: 
+    branches: [master]
+  pull_request:
+    branches: [master]
+    
