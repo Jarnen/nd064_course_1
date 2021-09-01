@@ -1,11 +1,49 @@
 ## Docker commands used to build the application 
 # TODO: insert the docker build command
+docker build -t techtrends .
 
 ## Docker commands used to run the application
 # TODO: insert the docker run command
+docker run -d -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
 # TODO: insert the docker logs command
+docker logs -f --until=2m gallant_panini
 
 ## Logs from the container running the TechTrends application
 # TODO: paste logs from the Docker container 
+* Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+INFO: werkzeug:  * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+INFO: werkzeug: 172.17.0.1 - - [01/Sep/2021 06:52:07] "GET / HTTP/1.1" 200 -
+INFO: werkzeug: 172.17.0.1 - - [01/Sep/2021 06:52:07] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO: werkzeug: 172.17.0.1 - - [01/Sep/2021 06:52:07] "GET /favicon.ico HTTP/1.1" 404 -
+INFO: app: Metrics request successful
+INFO: werkzeug: 172.17.0.1 - - [01/Sep/2021 06:52:51] "GET /metrics HTTP/1.1" 200 -
+INFO: app: Health check request successful
+INFO: werkzeug: 172.17.0.1 - - [01/Sep/2021 06:53:05] "GET /healthz HTTP/1.1" 200 -
+INFO: app: 01/09/2021, 06:53:13: Error 404: Trying to access Non-existing article.
+INFO: werkzeug: 172.17.0.1 - - [01/Sep/2021 06:53:13] "GET /90 HTTP/1.1" 404 -
+INFO: werkzeug: 172.17.0.1 - - [01/Sep/2021 06:53:22] "GET / HTTP/1.1" 200 -
+INFO: app: 01/09/2021, 06:59:11, "About Us" page is retrieved!
+INFO: werkzeug: 172.17.0.1 - - [01/Sep/2021 06:59:11] "GET /about HTTP/1.1" 200 -
+INFO: werkzeug: 172.17.0.1 - - [01/Sep/2021 06:59:50] "GET /create HTTP/1.1" 200 -
+INFO: werkzeug: 172.17.0.1 - - [01/Sep/2021 07:00:34] "GET / HTTP/1.1" 200 -
+INFO: app: 01/09/2021, 07:00:36, Article "KubeCon + CloudNativeCon 2021" retrieved!
+INFO: werkzeug: 172.17.0.1 - - [01/Sep/2021 07:00:36] "GET /2 HTTP/1.1" 200 -
+INFO: werkzeug: 172.17.0.1 - - [01/Sep/2021 07:11:40] "GET / HTTP/1.1" 200 -
+INFO: app: 01/09/2021, 07:11:46, "About Us" page is retrieved!
+INFO: werkzeug: 172.17.0.1 - - [01/Sep/2021 07:11:46] "GET /about HTTP/1.1" 200 -
+INFO: werkzeug: 172.17.0.1 - - [01/Sep/2021 07:11:55] "GET / HTTP/1.1" 200 -
+INFO: app: 01/09/2021, 07:11:57, Article "CNCF Cloud Native Interactive Landscape" retrieved!
+INFO: werkzeug: 172.17.0.1 - - [01/Sep/2021 07:11:57] "GET /4 HTTP/1.1" 200 -
+INFO: werkzeug: 172.17.0.1 - - [01/Sep/2021 07:11:59] "GET /create HTTP/1.1" 200 -
+INFO: app: 01/09/2021, 07:12:18: New article, Title: "Test Create Post" created,
+INFO: werkzeug: 172.17.0.1 - - [01/Sep/2021 07:12:18] "POST /create HTTP/1.1" 302 -
+INFO: werkzeug: 172.17.0.1 - - [01/Sep/2021 07:12:18] "GET / HTTP/1.1" 200 -
+INFO: app: 01/09/2021, 07:12:25, Article "Test Create Post" retrieved!
+INFO: werkzeug: 172.17.0.1 - - [01/Sep/2021 07:12:25] "GET /7 HTTP/1.1" 200 -
+INFO: werkzeug: 172.17.0.1 - - [01/Sep/2021 07:12:28] "GET / HTTP/1.1" 200 -

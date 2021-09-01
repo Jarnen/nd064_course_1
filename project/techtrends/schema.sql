@@ -6,3 +6,11 @@ CREATE TABLE posts (
     title TEXT NOT NULL,
     content TEXT NOT NULL
 );
+
+
+DROP TABLE IF EXISTS connections;
+
+CREATE TABLE connections (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    datetime TEXT NULL
+);
